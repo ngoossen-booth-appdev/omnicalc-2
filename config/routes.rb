@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get("/wizard_subtract", {:controller => "application", :action => "compute_subtraction" })
   get("/wizard_multiply", {:controller => "application", :action => "compute_multiplication" })
   get("/wizard_divide", {:controller => "application", :action => "compute_division" })
-  get("/muggle_add", {:controller => "application", :action => "compute_addition" })
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
