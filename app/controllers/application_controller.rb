@@ -17,11 +17,11 @@ class ApplicationController < ActionController::Base
   end  
 
   def compute_addition
-@first = params.fetch("first_num")
-@second = params.fetch("second_num")
-@result = @first.to_f + @second.to_f
+    @first = params.fetch("first_num")
+    @second = params.fetch("second_num")
+    @result = @first.to_f + @second.to_f
 
-render({ :template => "/something_templates/addition_results.html.erb"})
+    render({ :template => "/something_templates/addition_results.html.erb"})
   end
 
     def compute_subtraction
