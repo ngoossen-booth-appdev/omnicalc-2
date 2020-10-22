@@ -6,9 +6,12 @@ class GeocodingController < ApplicationController
 
     @address_from_user = params.fetch("user_street_address")
 
-    @gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + @address_from_user + "&key="
+    gmaps_key = ENV.fetch("GMAPS_KEY")
 
-        raw_data = open(@gmaps_url).read
+    
+    @gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + @address_from_user + "&key=" + gmaps_key
+
+    raw_data = open(@gmaps_url).read
     
     parsed_data = JSON.parse(raw_data)
 
