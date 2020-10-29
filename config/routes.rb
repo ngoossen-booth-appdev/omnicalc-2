@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get("/street_to_coords/results", {:controller => "geocoding", :action => "get_lat_lon"}  )
   get("/coords_to_weather/new", {:controller => "weather", :action => "give_coords"}  )
   get("/coords_to_weather/results", {:controller => "weather", :action => "get_weather"}  )
+  get("/street_to_weather/new", {:controller => "weather", :action => "give_street"}  )
+  # get("/street_to_weather/results", {:controller => "weather", :action => "get_weather"}  )
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
